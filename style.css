@@ -1,0 +1,24 @@
+:root{color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#000;overflow:hidden;font:13px/1.5 ui-monospace,Menlo,Consolas,monospace;color:#b9c2c9}
+canvas{position:fixed;inset:0;width:100%;height:100%}
+/* glow is drawn at 1/4 resolution, then blurred by the GPU: cheap and soft */
+#glow{filter:blur(9px);opacity:.85;mix-blend-mode:screen}
+#cam{position:fixed;right:12px;bottom:12px;width:160px;border-radius:6px;opacity:.55;transition:opacity .2s}
+#cam.off{opacity:0;pointer-events:none}
+#cursor{position:fixed;left:0;top:0;width:26px;height:26px;margin:-13px 0 0 -13px;border:2px solid var(--c,#39ff88);border-radius:50%;opacity:0;pointer-events:none;will-change:transform}
+#cursor.on{opacity:.9}
+#cursor.draw{background:var(--c,#39ff88);transform-origin:center}
+#target{position:fixed;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;display:none;pointer-events:none;
+  background:conic-gradient(#39ff88 calc(var(--p,0)*360deg),#2a3238 0);-webkit-mask:radial-gradient(circle,transparent 22px,#000 23px);mask:radial-gradient(circle,transparent 22px,#000 23px)}
+#target.on{display:block}
+#status{position:fixed;left:16px;top:14px;transition:opacity .4s}
+.fade{opacity:0}
+#help{position:fixed;left:16px;bottom:16px;max-width:340px;padding:12px 14px;background:rgba(10,14,16,.78);border:1px solid #2a3238;border-radius:8px;transition:opacity .3s}
+#help h2{margin:0 0 8px;font-size:13px;color:#e6edf1;font-weight:600}
+#help h2 span{font-weight:400;color:#7d8991}
+#help dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin:0}
+#help dt{color:#39ff88;white-space:nowrap}
+#help dd{margin:0}
+#help.fade{opacity:0;pointer-events:none}
+#perf{position:fixed;right:16px;top:14px;transition:opacity .3s}

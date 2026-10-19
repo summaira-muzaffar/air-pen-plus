@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Air Pen+</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="glow"></canvas>
+<canvas id="core"></canvas>
+<video id="cam" playsinline muted></video>
+<div id="cursor"></div>
+<div id="target"></div>
+<div id="perf" class="fade"></div>
+<div id="status">Starting camera…</div>
+<aside id="help">
+<h2>Air Pen+ controls <span>(H to hide)</span></h2>
+<dl>
+<dt>Pinch</dt><dd>Touch thumb and index finger together to draw. Open them to stop.</dd>
+<dt>Shift</dt><dd>Hold to draw without pinching (same pointer).</dd>
+<dt>Space</dt><dd>Clear everything.</dd>
+<dt>Z</dt><dd>Undo the last stroke (also restores a cleared drawing).</dd>
+<dt>C</dt><dd>Change colour.</dd>
+<dt>[ and ]</dt><dd>Thinner or thicker brush.</dd>
+<dt>K</dt><dd>Calibrate to the projector: pinch and hold on each of 4 dots.</dd>
+<dt>R</dt><dd>Reset calibration.</dd>
+<dt>M</dt><dd>Flip left and right (when not calibrated).</dd>
+<dt>V</dt><dd>Show or hide the camera preview.</dd>
+<dt>P</dt><dd>Show or hide speed stats (fps, detect and draw time).</dd>
+<dt>F</dt><dd>Fullscreen on or off.</dd>
+</dl>
+</aside>
+<script type="module" src="script.js"></script>
+</body>
+</html>
